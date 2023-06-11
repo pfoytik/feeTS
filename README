@@ -1,0 +1,4 @@
+# Bitcoin Mempool Fee Time Series (feeTS)
+
+first run npm install
+then node server.js
