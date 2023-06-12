@@ -2,3 +2,8 @@
 
 first run npm install
 then node server.js
+
+node server.js will run the basic data plot all within one file
+node part_server.js will run the data but split into parts, html, js, and webserver
+
+
