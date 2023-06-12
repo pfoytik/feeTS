@@ -3,11 +3,11 @@ const { formatISO } = require('date-fns');
 const axios = require('axios');
 const app = express();
 
-// Fetch block data from Mempool.space API
+//read file blocks.json
+const fs = require('fs');
 const fetchBlockData = async () => {
-  const apiUrl = 'https://mempool.space/api/v1/blocks';
-  const response = await axios.get(apiUrl);
-  return response.data;
+  const data = fs.readFileSync('blocks.json', 'utf8');
+  return JSON.parse(data);
 };
 
 app.get('/data', async (req, res) => {
